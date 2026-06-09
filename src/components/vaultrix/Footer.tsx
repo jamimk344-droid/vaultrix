@@ -13,15 +13,33 @@ export function Footer() {
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <a href="https://discord.gg/c8VBAWAdwE" target="_blank" rel="noreferrer"
+            <a
+              href="https://discord.gg/c8VBAWAdwE"
+              target="_blank"
+              rel="noreferrer"
               aria-label="Discord"
-              className="flex h-10 w-10 items-center justify-center rounded-xl glass hover:bg-white/10 transition-colors">
-              <img src={ASSETS.social.discord} alt="" aria-hidden className="h-4 w-4 brightness-0 invert" />
+              className="flex h-10 w-10 items-center justify-center rounded-xl glass hover:bg-white/10 transition-colors"
+            >
+              <img
+                src={ASSETS.social.discord}
+                alt=""
+                aria-hidden
+                className="h-4 w-4 brightness-0 invert"
+              />
             </a>
-            <a href="https://www.instagram.com/vaultrix.1/" target="_blank" rel="noreferrer"
+            <a
+              href="https://www.instagram.com/vaultrix.1/"
+              target="_blank"
+              rel="noreferrer"
               aria-label="Instagram"
-              className="flex h-10 w-10 items-center justify-center rounded-xl glass hover:bg-white/10 transition-colors">
-              <img src={ASSETS.social.instagram} alt="" aria-hidden className="h-4 w-4 brightness-0 invert" />
+              className="flex h-10 w-10 items-center justify-center rounded-xl glass hover:bg-white/10 transition-colors"
+            >
+              <img
+                src={ASSETS.social.instagram}
+                alt=""
+                aria-hidden
+                className="h-4 w-4 brightness-0 invert"
+              />
             </a>
           </div>
         </div>
@@ -30,8 +48,12 @@ export function Footer() {
           <div>Vaultrix Shop © 2026 — All rights reserved.</div>
           <div>
             Developed by{" "}
-            <a href="https://nebulavex1.netlify.app" target="_blank" rel="noreferrer"
-              className="font-medium gradient-text hover:underline">
+            <a
+              href="https://nebulavex1.netlify.app"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium gradient-text hover:underline"
+            >
               NebulaVex
             </a>
           </div>

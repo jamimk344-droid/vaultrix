@@ -28,7 +28,12 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
     return () => cancelAnimationFrame(raf);
   }, [inView, value]);
 
-  return <span ref={ref}>{n}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {n}
+      {suffix}
+    </span>
+  );
 }
 
 export function Stats() {
@@ -51,7 +56,9 @@ export function Stats() {
                 <div className="font-display text-4xl sm:text-5xl md:text-6xl font-bold gradient-text">
                   <Counter value={s.value} suffix={s.suffix} />
                 </div>
-                <div className="mt-2 text-sm text-muted-foreground uppercase tracking-wider">{s.label}</div>
+                <div className="mt-2 text-sm text-muted-foreground uppercase tracking-wider">
+                  {s.label}
+                </div>
               </motion.div>
             ))}
           </div>

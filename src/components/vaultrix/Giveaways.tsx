@@ -2,11 +2,19 @@ import { motion } from "framer-motion";
 import { Gift, Sparkles, PartyPopper } from "lucide-react";
 
 const GIVEAWAYS = [
-  { title: "Nitro Giveaways",     desc: "Monthly Discord Nitro drops for active members.", emoji: "🎁" },
-  { title: "Netflix Giveaways",   desc: "Premium Netflix profiles given away each season.", emoji: "🍿" },
-  { title: "Gemini Pro Giveaways",desc: "Free Gemini Pro / Google AI Pro slots.",          emoji: "🤖" },
-  { title: "VPS Giveaways",       desc: "Free VPS hosting for community events.",          emoji: "🖥️" },
-  { title: "Community Events",    desc: "Quizzes, gaming nights and milestone parties.",   emoji: "🎉" },
+  {
+    title: "Nitro Giveaways",
+    desc: "Monthly Discord Nitro drops for active members.",
+    emoji: "🎁",
+  },
+  {
+    title: "Netflix Giveaways",
+    desc: "Premium Netflix profiles given away each season.",
+    emoji: "🍿",
+  },
+  { title: "Gemini Pro Giveaways", desc: "Free Gemini Pro / Google AI Pro slots.", emoji: "🤖" },
+  { title: "VPS Giveaways", desc: "Free VPS hosting for community events.", emoji: "🖥️" },
+  { title: "Community Events", desc: "Quizzes, gaming nights and milestone parties.", emoji: "🎉" },
 ];
 
 export function Giveaways() {
@@ -34,7 +42,9 @@ export function Giveaways() {
 
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center max-w-2xl mx-auto mb-12"
         >
           <span className="inline-flex items-center gap-1.5 rounded-full glass px-3 py-1 text-xs font-medium text-muted-foreground mb-4">
@@ -43,14 +53,18 @@ export function Giveaways() {
           <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight">
             Free stuff, <span className="gradient-text">every week</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">Join the Discord to enter active giveaways and community events.</p>
+          <p className="mt-4 text-muted-foreground">
+            Join the Discord to enter active giveaways and community events.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-10">
           {GIVEAWAYS.map((g, i) => (
             <motion.div
               key={g.title}
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
               whileHover={{ y: -6, rotate: -1 }}
               className="glass-strong rounded-2xl p-5 text-center"
@@ -69,8 +83,12 @@ export function Giveaways() {
         </div>
 
         <div className="flex justify-center">
-          <a href="https://discord.gg/c8VBAWAdwE" target="_blank" rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-2xl gradient-orange-purple px-7 py-3.5 font-semibold text-white glow-both hover:scale-105 transition-transform">
+          <a
+            href="https://discord.gg/c8VBAWAdwE"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-2xl gradient-orange-purple px-7 py-3.5 font-semibold text-white glow-both hover:scale-105 transition-transform"
+          >
             <Gift className="h-4 w-4" /> Join & Enter Giveaways <Sparkles className="h-4 w-4" />
           </a>
         </div>

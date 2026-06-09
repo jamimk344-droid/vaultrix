@@ -23,7 +23,9 @@ export function NoticePopup() {
     <AnimatePresence>
       {open && (
         <motion.div
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           className="fixed inset-0 z-[80] flex items-center justify-center p-4"
         >
           <div className="absolute inset-0 bg-background/70 backdrop-blur-md" onClick={close} />
@@ -34,7 +36,11 @@ export function NoticePopup() {
             transition={{ type: "spring", damping: 22 }}
             className="relative w-full max-w-md glass-strong rounded-3xl p-6 sm:p-8 glow-both"
           >
-            <button onClick={close} className="absolute right-4 top-4 p-1.5 rounded-lg hover:bg-white/10" aria-label="Close">
+            <button
+              onClick={close}
+              className="absolute right-4 top-4 p-1.5 rounded-lg hover:bg-white/10"
+              aria-label="Close"
+            >
               <X className="h-4 w-4" />
             </button>
 
@@ -44,16 +50,24 @@ export function NoticePopup() {
 
             <h3 className="font-display text-2xl font-bold mb-2">Important Notice</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Prices change frequently due to market fluctuations. For the latest prices and stock updates, join our Discord server.
+              Prices change frequently due to market fluctuations. For the latest prices and stock
+              updates, join our Discord server.
             </p>
 
             <div className="mt-6 flex flex-col sm:flex-row gap-2.5">
-              <a href="https://discord.gg/c8VBAWAdwE" target="_blank" rel="noreferrer" onClick={close}
-                className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl gradient-orange-purple px-5 py-3 font-semibold text-white hover:opacity-90">
+              <a
+                href="https://discord.gg/c8VBAWAdwE"
+                target="_blank"
+                rel="noreferrer"
+                onClick={close}
+                className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl gradient-orange-purple px-5 py-3 font-semibold text-white hover:opacity-90"
+              >
                 <MessageCircle className="h-4 w-4" /> Join Discord
               </a>
-              <button onClick={close}
-                className="flex-1 inline-flex items-center justify-center rounded-xl glass px-5 py-3 font-medium hover:bg-white/10">
+              <button
+                onClick={close}
+                className="flex-1 inline-flex items-center justify-center rounded-xl glass px-5 py-3 font-medium hover:bg-white/10"
+              >
                 Later
               </button>
             </div>
